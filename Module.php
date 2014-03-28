@@ -1,2 +1,2 @@
 <?php
-require_once __DIR__ . '/src/WebtalesRss/Module.php';
+require_once __DIR__ . '/src/WebTalesRss/Module.php';

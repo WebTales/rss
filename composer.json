@@ -4,6 +4,6 @@
         "php": ">=5.3"
     },
     "autoload": {
-        "classmap": ["src/WebtalesRss"]
+        "classmap": ["src/WebTalesRss"]
     }
 }
