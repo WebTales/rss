@@ -1,0 +1,4 @@
+rss
+===
+
+Rubedo RSS extension
