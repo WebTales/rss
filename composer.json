@@ -1,0 +1,9 @@
+{
+    "name": "webtales/rss",
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "classmap": ["src/WebtalesRss"]
+    }
+}
