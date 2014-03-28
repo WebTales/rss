@@ -1,0 +1,7 @@
+{
+    "webtales.block.rss.type": "RSS",
+    "webtales.block.rss.describe": "Show RSS feed",
+    "webtales.block.rss.title": "RSS feed",
+    "webtales.block.rss.category": "RSS",
+    "webtales.block.rss.field.url.label": "URL"
+}
