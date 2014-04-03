@@ -16,6 +16,34 @@
                                 "fieldLabel":"webtales.block.rss.field.url.label",
                                 "name":"url"
                             }
+                        },
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "config": {
+                                "fieldLabel": "#ext-gen1406#",
+                                "name": "showOnlyTitle",
+                                "inputValue": true
+                            }
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "config": {
+                                "fieldLabel": "webtales.block.rss.field.maxItems.label",
+                                "name": "maxItems",
+                                "allowDecimals": false,
+                                "minValue": 0,
+                                "value":80
+                            }
+                        },
+                        {
+                            "type": "Ext.form.field.Number",
+                            "config": {
+                                "fieldLabel": "webtales.block.rss.field.summaryMaxChars.label",
+                                "name": "summaryMaxChars",
+                                "allowDecimals": false,
+                                "minValue": 0,
+                                "value":80
+                            }
                         }
                     ]
                 }

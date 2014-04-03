@@ -3,5 +3,9 @@
     "webtales.block.rss.describe": "Afficher une liste d'une flux RSS",
     "webtales.block.rss.title": "Flux RSS",
     "webtales.block.rss.category": "RSS",
-    "webtales.block.rss.field.url.label": "URL"
+    "webtales.block.rss.field.url.label": "URL",
+    "webtales.block.rss.field.maxItems.label": "Nombre d'items maximum",
+    "webtales.block.rss.field.summaryMaxChars.label": "Longueur maximum avant troncature",
+
+    "webtales.block.rss.error.notContactable": "L'adresse du flux RSS n'est pas joignable."
 }

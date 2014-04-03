@@ -1,0 +1,55 @@
+{% extends "@Root/block.html.twig" %}
+
+{% block mainContent %}
+    <div id="list-{{ prefix }}-{{ page.currentPage }}" class="active">
+        {% if blockConfig.maxItems is not empty %}
+            {% set maxItems = blockConfig.maxItems %}
+        {% else %}
+            {% set maxItems = 100 %}
+        {% endif %}
+        {% if blockConfig.summaryMaxChars is not empty %}
+            {% set maxLength = blockConfig.summaryMaxChars %}
+        {% else %}
+            {% set maxLength = 230 %}
+        {% endif %}
+        {% for key, row in feed if key < maxItems %}
+            <div class="block clearfix shortsingle-rubedo">
+                {% if row.title is not empty %}
+                <header class="entry-header">
+                    <h2 class="post-title-small">
+                        {% if row.link is not empty %}
+                            <a href="{{ row.link }}" title="{{row.title}}">{{row.title}}</a>
+                        {% else %}
+                            {{row.title}}
+                        {% endif %}
+                    </h2>
+                </header>
+                {% endif %}
+                {% if not blockConfig.showOnlyTitle %}
+                    {% set description = row.description|striptags %}
+                    <div class="entry-content">
+                        <p>
+                            {% if description|length > description[:maxLength]|length %}
+                                {{ description[:maxLength] ~ '...' }}
+                            {% else %}
+                                {{ description }}
+                            {% endif %}
+                        </p>
+                    </div>
+
+
+                    <div class="text-right">
+                        {% if row.dateModified is not empty %}
+                            <div class="entry-info date">
+                                {{row.dateModified|localizeddate('long', 'none', lang)}}
+                            </div>
+                        {% endif %}
+                        {% if row.link is not empty %}
+                            <a href="{{ row.link }}" title="{{row.title}}">{{ "Block.ContentList.Label.ReadMore" | fotrans }}</a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

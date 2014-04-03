@@ -1,7 +1,7 @@
 <?php
 return array(
     'localisationfiles' => array(
-        'module/WebTalesRss/locale/languagekey/rss.json'
+        'extensions/webtales/rss/locale/languagekey/rss.json'
     ),
     'blocksDefinition' => array(
         'rss' => array(
@@ -14,5 +14,10 @@ return array(
         'invokables' => array(
             'WebTalesRss\\Blocks\\Controller\\Rss' => 'WebTalesRss\\Blocks\\Controller\\RssController',
         )
+    ),
+    'templates' => array(
+        'namespaces' => array(
+            'Rss' => realpath(__DIR__ . '/../templates')
+        ),
     ),
 );
